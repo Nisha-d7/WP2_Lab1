@@ -40,11 +40,20 @@ To update the user interface (UI) using JavaScript, first we need to work with t
 index.html
 
 Imperative Programming:
+
 <div id ="app"></div>
 <script type="text/javascript">
 
- // Step 1: Select the div with id="app"
+ Step 1: Select the div with id="app"
  const app = document.getElementById('app');
+  Step 2: Create an <h1> element
+  const header = document.createElement('h1');
+  Step 3: Create the text node
+   const text = 'Develop. Preview. Ship.';
+   const headerContent = document.createTextNode(text);
+   Step 4: Add the text to the <h1> element
+    header.appendChild(headerContent);
+
 
 
 
