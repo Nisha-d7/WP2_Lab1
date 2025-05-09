@@ -12,6 +12,35 @@ The interesting thing i found like as we start using more modern concepts like d
 https://nextjs.org/learn/react-foundations
 
 #Explanation
+React & Next.js
+
+ React
+
+React is a JavaScript library for building interactive user interfaces.
+
+User interfaces (UI) means, the elements that users see and interact with on-screen basically, the parts of a website that users interact with like buttons, forms, navigation bars, etc.
+ 
+By library means, React provides helpful functions (APIs) to build UI, but leaves it up to the developer where to use those functions in their application.
+
+Next.js
+Next.js is a React framework that gives building blocks to create web applications means it comes with built-in tools and features that make it easier to develop web applications.
+
+Framework means Next.js handles the tooling and configuration needed for React, and provides additional structure, features, and optimizations for application.
+
+React is used to build UI, then incrementally adopt Next.js features to solve common application requirements such as routing, data fetching, and caching - all while improving the developer and end-user experience.
+
+The browser then creates a structure called the DOM (Document Object Model), which is a tree-like representation of all the HTML elements on the page.
+ 
+JavaScript and DOM methods can be used to interact with this structure — like listening to clicks, updating content, or changing styles. This is what allows web apps to be interactive and dynamic.
+
+Updating UI with JavaScript and React
+
+To update the user interface (UI) using JavaScript, first we need to work with the DOM (Document Object Model). The DOM is a tree-like structure that represents the HTML elements on a web page.
+
+index.html
+
+
+
 
 
 
