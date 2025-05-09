@@ -45,21 +45,30 @@ Imperative Programming:
 <script type="text/javascript">
 
  Step 1: Select the div with id="app"
- const app = document.getElementById('app');
- 
-  Step 2: Create an <h1> element
+  const app = document.getElementById('app');
+
+   Step 2: Create an <h1> element
   const header = document.createElement('h1');
-  
-  Step 3: Create the text node
+
+   Step 3: Create the text node
    const text = 'Develop. Preview. Ship.';
    const headerContent = document.createTextNode(text);
-   
+
    Step 4: Add the text to the <h1> element
-    header.appendChild(headerContent);
+   header.appendChild(headerContent);
 
    Step 5: Add the <h1> to the page inside the <div>
-    app.appendChild(header);
-    </script>
+   app.appendChild(header);
+   </script>
+
+
+ 
+
+ 
+
+  
+
+   
 
 
 
