@@ -43,8 +43,8 @@ Imperative Programming:
 
 <div id ="app"></div>
 <script type="text/javascript">
-
- ```Step 1: Select the div with id="app"
+```
+ Step 1: Select the div with id="app"
   const app = document.getElementById('app');
 
  Step 2: Create an <h1> element
