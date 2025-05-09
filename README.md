@@ -39,6 +39,15 @@ To update the user interface (UI) using JavaScript, first we need to work with t
 
 index.html
 
+Imperative Programming:
+<div id ="app"></div>
+<script type="text/javascript">
+
+ // Step 1: Select the div with id="app"
+ const app = document.getElementById('app');
+
+
+
 
 
 
