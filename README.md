@@ -12,7 +12,6 @@ The interesting thing i found like as we start using more modern concepts like d
 https://nextjs.org/learn/react-foundations
 
 #Explanation
-
 React & Next.js
 
  React
@@ -312,6 +311,11 @@ useState(0) creates a likes variable with an initial value of 0.
 setLikes() updates the value whenever the button is clicked.
 
 Every time likes changes, React re-renders the component to show the new value.
+
+
+
+
+
 
 
 
