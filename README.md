@@ -231,7 +231,8 @@ Interactivity means how users can engage with elements on the page and how those
 
 To create a Like Button:
 
-1.Create a Functional Component
+1.Create a Functional Component:
+
 function HomePage() {
   const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton'];
 
@@ -246,7 +247,9 @@ function HomePage() {
     </div>
   );
 }
-2.Add Click Event Handler
+
+2.Add Click Event Handler:
+
 function handleClick() {
   console.log('Button clicked');
 }
@@ -256,7 +259,9 @@ return (
     <button onClick={handleClick}>Like</button>
   </div>
 );
-3.Use State to Track Likes
+
+3.Use State to Track Likes:
+
 const [likes, setLikes] = React.useState(0);
 
 function handleClick() {
