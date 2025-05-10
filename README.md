@@ -67,6 +67,7 @@ Imperative Programming:
       // Step 5: Add the <h1> to the page inside the <div>
       app.appendChild(header);
     </script>
+```    
 
 After opening this file in a browser, I could see the <h1> on the screen, even though it wasn’t originally written in the HTML. This happened because JavaScript used DOM methods to create and insert elements dynamically.
 
@@ -114,6 +115,7 @@ JSX looks like HTML but is actually JavaScript.
 Browsers don’t understand JSX, so we need Babel to convert it.
 
 With React, I don’t need to worry about createElement, appendChild, etc. Just write <h1>Text</h1> and React handles the rest.
+```
 
 Building UI with Components:
 
