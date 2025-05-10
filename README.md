@@ -48,25 +48,26 @@ index.html
 
 Imperative Programming:
 
-  <div id="app"></div>
+   <div id="app"></div>
 
-  <script type="text/javascript">
-    Step 1: Select the div with id="app"
+   <script type="text/javascript">
+      Step 1: Select the div with id="app"
       const app = document.getElementById('app');
 
-     Step 2: Create an <h1> element
+      Step 2: Create an <h1> element
       const header = document.createElement('h1');
 
-    Step 3: Create the text node
+      Step 3: Create the text node
       const text = 'Develop. Preview. Ship.';
       const headerContent = document.createTextNode(text);
 
-    Step 4: Add the text to the <h1> element
+      Step 4: Add the text to the <h1> element
       header.appendChild(headerContent);
 
-    Step 5: Add the <h1> to the page inside the <div>
+      Step 5: Add the <h1> to the page inside the <div>
       app.appendChild(header);
     </script>
+    
 ```
 After opening this file in a browser, I could see the <h1> on the screen, even though it wasn’t originally written in the HTML. This happened because JavaScript used DOM methods to create and insert elements dynamically.
 
@@ -83,12 +84,12 @@ Declarative Programming:
     <div id="app"></div>
 
     <script type="text/babel">
-     React code (declarative)
+      // React code (declarative)
       const App = () => {
         return <h1>Develop. Preview. Ship.</h1>;
       };
 
-      Render the App component into the div with id="app"
+      // Render the App component into the div with id="app"
       ReactDOM.render(<App />, document.getElementById('app'));
     </script>
  
@@ -115,6 +116,7 @@ Browsers don’t understand JSX, so we need Babel to convert it.
 
 With React, I don’t need to worry about createElement, appendChild, etc. Just write <h1>Text</h1> and React handles the rest.
 ```
+
 Building UI with Components:
 
 There are three core concepts of React to start building React applications. These are:
@@ -311,6 +313,7 @@ useState(0) creates a likes variable with an initial value of 0.
 setLikes() updates the value whenever the button is clicked.
 
 Every time likes changes, React re-renders the component to show the new value.
+
 
 
 
