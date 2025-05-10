@@ -12,32 +12,32 @@ The interesting thing i found like as we start using more modern concepts like d
 https://nextjs.org/learn/react-foundations
 
 #Explanation
+
 React & Next.js
 
- React
+React
 
 React is a JavaScript library for building interactive user interfaces.
 
-User interfaces (UI) means, the elements that users see and interact with on-screen basically, the parts of a website that users interact with like buttons, forms, navigation bars, etc.
- 
-By library means, React provides helpful functions (APIs) to build UI, but leaves it up to the developer where to use those functions in their application.
+User interfaces (UI) means the elements that users see and interact with on-screen — basically, the parts of a website that users interact with like buttons, forms, navigation bars, etc.
+
+By library, it means React provides helpful functions (APIs) to build UI but leaves it up to the developer where to use those functions in their application.
 
 Next.js
-Next.js is a React framework that gives building blocks to create web applications means it comes with built-in tools and features that make it easier to develop web applications.
+Next.js is a React framework that gives building blocks to create web applications — it comes with built-in tools and features that make it easier to develop web applications.
 
-Framework means Next.js handles the tooling and configuration needed for React, and provides additional structure, features, and optimizations for application.
+Framework means Next.js handles the tooling and configuration needed for React and provides additional structure, features, and optimizations for applications.
 
-React is used to build UI, then incrementally adopt Next.js features to solve common application requirements such as routing, data fetching, and caching - all while improving the developer and end-user experience.
+React is used to build UI, then incrementally adopt Next.js features to solve common application requirements such as routing, data fetching, and caching — all while improving the developer and end-user experience.
 
 So we can use React and Next.js to build fully interactive, highly dynamic, and performant web applications.
 
-
 Rendering User Interfaces (UI)
 
-When a user opens a web page, the browser gets an HTML file from the server. 
+When a user opens a web page, the browser gets an HTML file from the server.
 
 The browser then creates a structure called the DOM (Document Object Model), which is a tree-like representation of all the HTML elements on the page.
- 
+
 JavaScript and DOM methods can be used to interact with this structure — like listening to clicks, updating content, or changing styles. This is what allows web apps to be interactive and dynamic.
 
 Updating UI with JavaScript and React
@@ -48,25 +48,16 @@ index.html
 
 Imperative Programming:
 
-  <div id="app"></div>
+<div id="app"></div>
 
-   <script type="text/javascript">
-      // Step 1: Select the div with id="app"
-      const app = document.getElementById('app');
-
-      // Step 2: Create an <h1> element
-      const header = document.createElement('h1');
-
-      // Step 3: Create the text node
-      const text = 'Develop. Preview. Ship.';
-      const headerContent = document.createTextNode(text);
-
-      // Step 4: Add the text to the <h1> element
-      header.appendChild(headerContent);
-
-      // Step 5: Add the <h1> to the page inside the <div>
-      app.appendChild(header);
-    </script>
+<script type="text/javascript">
+  const app = document.getElementById('app');
+  const header = document.createElement('h1');
+  const text = 'Develop. Preview. Ship.';
+  const headerContent = document.createTextNode(text);
+  header.appendChild(headerContent);
+  app.appendChild(header);
+</script>
 
 After opening this file in a browser, I could see the <h1> on the screen, even though it wasn’t originally written in the HTML. This happened because JavaScript used DOM methods to create and insert elements dynamically.
 
@@ -75,6 +66,7 @@ This step-by-step coding is called imperative programming, where we tell the bro
 But this process is hard to manage when building larger applications. So developers prefer a declarative approach, where we just describe what we want on the screen — and let the library (like React) handle the steps.
 
 Declarative Programming:
+
 <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
 <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
@@ -103,15 +95,13 @@ Using React with JSX:
 React allows us to describe the UI in a cleaner way. But because browsers don’t understand JSX directly, we need Babel to convert JSX to regular JavaScript.
 
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-
 <script type="text/jsx">
-// JSX looks like HTML but is actually JavaScript.
 
-// Browsers don’t understand JSX, so we need Babel to convert it.
+ JSX looks like HTML but is actually JavaScript.
 
-// With React, I don’t need to worry about createElement, appendChild, etc.
-// Just write <h1>Text</h1> and React handles the rest.
-</script>
+Browsers don’t understand JSX, so we need Babel to convert it.
+
+With React, I don’t need to worry about createElement, appendChild, etc. Just write <h1>Text</h1> and React handles the rest.
 
 Building UI with Components:
 
@@ -127,9 +117,9 @@ Components:
 
 Components are like LEGO bricks: small, reusable, self-contained pieces of code that can be combined to create complex UIs. Each component represents a part of the user interface (UI), like a button, a header, or a form. When we want to make changes to UI, we can modify just the relevant component without affecting the whole application. This makes the code cleaner and easier to manage.
 
-For example:
-<div id="app"></div>
+Example:
 
+ <div id="app"></div>
 <script type="text/jsx">
   const app = document.getElementById("app");
 
@@ -140,19 +130,20 @@ For example:
   const root = ReactDOM.createRoot(app);
   root.render(<Header />);
 </script>
+
 The component is named Header, and it returns a heading element.
 
 It must start with a capital letter to distinguish it from HTML tags.
 
 ReactDOM.createRoot() and render() are used to display the component in the browser.
 
-Nesting Components
+Nesting Components:
 
-It allows us to nest components inside other components.
+It allows you to nest components inside other components.
 
-For instance, here HomePage is a top-level component that includes the Header component inside it.
-  
-  function Header() {
+For instance, HomePage is a top-level component that includes the Header component inside it.
+
+function Header() {
   return <h1>Develop. Preview. Ship.</h1>;
 }
 
@@ -164,8 +155,7 @@ function HomePage() {
     </div>
   );
 }
-Component Tree
-
+Component Tree:
 A component tree is a structure where components are nested within each other. For example:
 
 HomePage could contain:
@@ -179,8 +169,6 @@ Footer
 Displaying Data with Props:
 
 Props act like parameters in functions, allowing us to pass data from one component to another.
-
-Here, we are using the Header component twice, it just repeats the same message.
 function Header() {
   return <h1>Develop. Preview. Ship.</h1>;
 }
@@ -193,7 +181,7 @@ function HomePage() {
     </div>
   );
 }
-So, to show different text each time, we can pass a prop like this:
+To show different text each time, we can pass a prop:
 function HomePage() {
   return (
     <div>
@@ -201,7 +189,7 @@ function HomePage() {
     </div>
   );
 }
-In the Header component, we can access this prop using the props object:
+
 function Header(props) {
   return <h1>{props.title}</h1>;
 }
@@ -214,7 +202,7 @@ function HomePage() {
     </div>
   );
 }
-Iterating through lists:
+Iterating through Lists:
 
 In many apps, we often want to show lists — like user names or products. We can use .map() method to loop through an array and create elements.
 
@@ -233,11 +221,7 @@ function HomePage() {
     </div>
   );
 }
-Defining an array of names.
-
-Using map() to go through each name and return a <li> element.
-
-Using key prop to uniquely identify each item. This helps React update the DOM efficiently.
+Defining an array of names, using map() to go through each name and return a <li> element, using key prop to uniquely identify each item.
 
 Adding Interactivity with State:
 
@@ -248,11 +232,11 @@ To create a Like Button:
 1.Create a Functional Component
 function HomePage() {
   const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton'];
-  
+
   return (
     <div>
       <ul>
-        {names.map(name => (
+        {names.map((name) => (
           <li key={name}>{name}</li>
         ))}
       </ul>
@@ -260,7 +244,6 @@ function HomePage() {
     </div>
   );
 }
-
 2.Add Click Event Handler
 function handleClick() {
   console.log('Button clicked');
@@ -271,25 +254,32 @@ return (
     <button onClick={handleClick}>Like</button>
   </div>
 );
-
 3.Use State to Track Likes
 const [likes, setLikes] = React.useState(0);
 
 function handleClick() {
-  setLikes(likes + 1); // Increase the count by 1
+  setLikes(likes + 1);
 }
-
-return (
-  <div>
-    <button onClick={handleClick}>Like ({likes})</button>
-  </div>
-);
-
 useState(0) creates a likes variable with an initial value of 0.
-
 setLikes() updates the value whenever the button is clicked.
-
 Every time likes changes, React re-renders the component to show the new value.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
