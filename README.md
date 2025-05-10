@@ -44,7 +44,9 @@ Updating UI with JavaScript and React
 To update the user interface (UI) using JavaScript, first we need to work with the DOM (Document Object Model). The DOM is a tree-like structure that represents the HTML elements on a web page.
 
 index.html
-Imperative Programming
+
+Imperative Programming:
+
 <div id="app"></div>
 <script type="text/javascript">
   const app = document.getElementById('app');
@@ -53,18 +55,19 @@ Imperative Programming
   const headerContent = document.createTextNode(text);
   header.appendChild(headerContent);
   app.appendChild(header);
-
-
+  
+```
 After opening this file in a browser, I could see the <h1> on the screen, even though it wasn’t originally written in the HTML. This happened because JavaScript used DOM methods to create and insert elements dynamically.
 
 This step-by-step coding is called imperative programming, where we tell the browser how to do each step.
 
 But this process is hard to manage when building larger applications. So developers prefer a declarative approach, where we just describe what we want on the screen — and let the library (like React) handle the steps.
 
-Declarative Programming
+Declarative Programming:
 <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
 <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
 </head>
 <body>
   <div id="app"></div>
@@ -96,6 +99,7 @@ React allows us to describe the UI in a cleaner way. But because browsers don’
 Browsers don’t understand JSX, so we need Babel to convert it.
 
 With React, I don’t need to worry about createElement, appendChild, etc. Just write <h1>Text</h1> and React handles the rest.
+```
 
 Building UI with Components
 
