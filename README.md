@@ -33,6 +33,7 @@ React is used to build UI, then incrementally adopt Next.js features to solve co
 So we can use React and Next.js to build fully interactive, highly dynamic, and performant web applications.
 
 Rendering User Interfaces (UI)
+```
 
 When a user opens a web page, the browser gets an HTML file from the server.
 
@@ -83,6 +84,7 @@ Declarative Programming:
   </script>
 
   So here, I didn’t have to manually create elements or text nodes. I just wrote what I want to display — an <h1> with some text — and React took care of updating the DOM.
+```
 
 Imperative: Tell the chef each step to make the pizza.
 Using plain JavaScript, we manually update the DOM (imperative approach).
