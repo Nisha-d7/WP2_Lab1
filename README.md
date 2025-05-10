@@ -44,10 +44,8 @@ Updating UI with JavaScript and React
 To update the user interface (UI) using JavaScript, first we need to work with the DOM (Document Object Model). The DOM is a tree-like structure that represents the HTML elements on a web page.
 
 index.html
-
 Imperative Programming:
 <div id="app"></div>
-
 <script type="text/javascript">
   const app = document.getElementById('app');
   const header = document.createElement('h1');
@@ -56,6 +54,7 @@ Imperative Programming:
   header.appendChild(headerContent);
   app.appendChild(header);
 </script>
+
 After opening this file in a browser, I could see the <h1> on the screen, even though it wasn’t originally written in the HTML. This happened because JavaScript used DOM methods to create and insert elements dynamically.
 
 This step-by-step coding is called imperative programming, where we tell the browser how to do each step.
