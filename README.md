@@ -44,7 +44,7 @@ Updating UI with JavaScript and React
 To update the user interface (UI) using JavaScript, first we need to work with the DOM (Document Object Model). The DOM is a tree-like structure that represents the HTML elements on a web page.
 
 index.html
-Imperative Programming:
+Imperative Programming
 <div id="app"></div>
 <script type="text/javascript">
   const app = document.getElementById('app');
@@ -53,7 +53,7 @@ Imperative Programming:
   const headerContent = document.createTextNode(text);
   header.appendChild(headerContent);
   app.appendChild(header);
-</script>
+
 
 After opening this file in a browser, I could see the <h1> on the screen, even though it wasn’t originally written in the HTML. This happened because JavaScript used DOM methods to create and insert elements dynamically.
 
@@ -61,7 +61,7 @@ This step-by-step coding is called imperative programming, where we tell the bro
 
 But this process is hard to manage when building larger applications. So developers prefer a declarative approach, where we just describe what we want on the screen — and let the library (like React) handle the steps.
 
-Declarative Programming:
+Declarative Programming
 <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
 <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
@@ -75,17 +75,17 @@ Declarative Programming:
     };
 
     ReactDOM.render(<App />, document.getElementById('app'));
-  </script>
+  
 
   So here, I didn’t have to manually create elements or text nodes. I just wrote what I want to display — an <h1> with some text — and React took care of updating the DOM.
 
-Imperative: Tell the chef each step to make the pizza.
+Imperative- Tell the chef each step to make the pizza.
 Using plain JavaScript, we manually update the DOM (imperative approach).
 
-Declarative: Just say "I want a cheese pizza" — and it gets made.
+Declarative -  Just say "I want a cheese pizza" — and it gets made.
 Using React, we declare what we want to show, and it handles the DOM updates (declarative approach).
 
-Using React with JSX:
+Using React with JSX
 
 React allows us to describe the UI in a cleaner way. But because browsers don’t understand JSX directly, we need Babel to convert JSX to regular JavaScript.
 
@@ -97,7 +97,7 @@ Browsers don’t understand JSX, so we need Babel to convert it.
 
 With React, I don’t need to worry about createElement, appendChild, etc. Just write <h1>Text</h1> and React handles the rest.
 
-Building UI with Components:
+Building UI with Components
 
 There are three core concepts of React to start building React applications. These are:
 
