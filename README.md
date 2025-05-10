@@ -67,7 +67,6 @@ Imperative Programming:
       // Step 5: Add the <h1> to the page inside the <div>
       app.appendChild(header);
     </script>
-    
 
 After opening this file in a browser, I could see the <h1> on the screen, even though it wasn’t originally written in the HTML. This happened because JavaScript used DOM methods to create and insert elements dynamically.
 
@@ -76,13 +75,9 @@ This step-by-step coding is called imperative programming, where we tell the bro
 But this process is hard to manage when building larger applications. So developers prefer a declarative approach, where we just describe what we want on the screen — and let the library (like React) handle the steps.
 
 Declarative Programming:
-
 <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
-
 <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
-
 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-
 </head>
 <body>
   <div id="app"></div>
@@ -95,7 +90,7 @@ Declarative Programming:
     ReactDOM.render(<App />, document.getElementById('app'));
   </script>
 
-So here, I didn’t have to manually create elements or text nodes. I just wrote what I want to display — an <h1> with some text — and React took care of updating the DOM.
+  So here, I didn’t have to manually create elements or text nodes. I just wrote what I want to display — an <h1> with some text — and React took care of updating the DOM.
 
 Imperative: Tell the chef each step to make the pizza.
 Using plain JavaScript, we manually update the DOM (imperative approach).
@@ -110,28 +105,29 @@ React allows us to describe the UI in a cleaner way. But because browsers don’
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
 <script type="text/jsx">
- JSX looks like HTML but is actually JavaScript.
+// JSX looks like HTML but is actually JavaScript.
 
-Browsers don’t understand JSX, so we need Babel to convert it.
+// Browsers don’t understand JSX, so we need Babel to convert it.
 
-With React, I don’t need to worry about createElement, appendChild, etc. Just write <h1>Text</h1> and React handles the rest.
-
-
+// With React, I don’t need to worry about createElement, appendChild, etc.
+// Just write <h1>Text</h1> and React handles the rest.
+</script>
 
 Building UI with Components:
 
 There are three core concepts of React to start building React applications. These are:
 
 Components
+
 Props
+
 State
 
- Components:
+Components:
 
 Components are like LEGO bricks: small, reusable, self-contained pieces of code that can be combined to create complex UIs. Each component represents a part of the user interface (UI), like a button, a header, or a form. When we want to make changes to UI, we can modify just the relevant component without affecting the whole application. This makes the code cleaner and easier to manage.
 
 For example:
-
 <div id="app"></div>
 
 <script type="text/jsx">
@@ -144,20 +140,19 @@ For example:
   const root = ReactDOM.createRoot(app);
   root.render(<Header />);
 </script>
-
 The component is named Header, and it returns a heading element.
 
 It must start with a capital letter to distinguish it from HTML tags.
 
-ReactDOM.createRoot() and render() used to display the component in the browser.
+ReactDOM.createRoot() and render() are used to display the component in the browser.
 
 Nesting Components
 
-It allows to nest components inside other components.
+It allows us to nest components inside other components.
 
-For instance here, HomePage is a top-level component that includes the Header component inside it.
-
-function Header() {
+For instance, here HomePage is a top-level component that includes the Header component inside it.
+  
+  function Header() {
   return <h1>Develop. Preview. Ship.</h1>;
 }
 
@@ -169,8 +164,8 @@ function HomePage() {
     </div>
   );
 }
+Component Tree
 
- Component Tree 
 A component tree is a structure where components are nested within each other. For example:
 
 HomePage could contain:
@@ -181,13 +176,11 @@ Article
 
 Footer
 
-
 Displaying Data with Props:
 
 Props act like parameters in functions, allowing us to pass data from one component to another.
 
-Here, we are using the Header component twice, it just repeats the same message.  
-
+Here, we are using the Header component twice, it just repeats the same message.
 function Header() {
   return <h1>Develop. Preview. Ship.</h1>;
 }
@@ -200,9 +193,7 @@ function HomePage() {
     </div>
   );
 }
-
-So, To show different text each time ,we can pass a prop like this:
-
+So, to show different text each time, we can pass a prop like this:
 function HomePage() {
   return (
     <div>
@@ -210,16 +201,11 @@ function HomePage() {
     </div>
   );
 }
-
 In the Header component, we can access this prop using the props object:
-
-
 function Header(props) {
   return <h1>{props.title}</h1>;
 }
-
-So in this way, whatever value we pass as title will be displayed in the <h1> tag. Now the component becomes dynamic and reusable.
-
+Now the component becomes dynamic and reusable:
 function HomePage() {
   return (
     <div>
@@ -228,13 +214,11 @@ function HomePage() {
     </div>
   );
 }
-
 Iterating through lists:
 
 In many apps, we often want to show lists — like user names or products. We can use .map() method to loop through an array and create elements.
 
-In this example, 
-
+Example:
 function HomePage() {
   const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton'];
 
@@ -249,7 +233,6 @@ function HomePage() {
     </div>
   );
 }
-
 Defining an array of names.
 
 Using map() to go through each name and return a <li> element.
@@ -258,15 +241,11 @@ Using key prop to uniquely identify each item. This helps React update the DOM e
 
 Adding Interactivity with State:
 
-Interactivity means how users can engage with elements on the page and how those interactions cause changes in the user interface (UI).To handle user actions like clicks, React supports event handlers such as onClick.
+Interactivity means how users can engage with elements on the page and how those interactions cause changes in the UI. To handle user actions like clicks, React supports event handlers such as onClick.
 
 To create a Like Button:
 
-1. Create a Functional Component
-
-Define a component HomePage using a function. It returns a list of names and a button.
-
-
+1.Create a Functional Component
 function HomePage() {
   const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton'];
   
@@ -282,40 +261,35 @@ function HomePage() {
   );
 }
 
-2. Add Click Event Handler
-
-To make the button interactive, add an onClick handler to the button element
-
-
-  function handleClick() {
-    console.log('Button clicked');
-  }
-
-  return (
-    <div>
-      <button onClick={handleClick}>Like</button>
-    </div>
-  );
+2.Add Click Event Handler
+function handleClick() {
+  console.log('Button clicked');
 }
 
-3. Use State to Track Likes
+return (
+  <div>
+    <button onClick={handleClick}>Like</button>
+  </div>
+);
 
-Here, using useState hook to keep track of how many times the button is clicked and initialize the likes state to 0.
+3.Use State to Track Likes
+const [likes, setLikes] = React.useState(0);
 
- function handleClick() {
-    setLikes(likes + 1); // Increase the count by 1
-  }
+function handleClick() {
+  setLikes(likes + 1); // Increase the count by 1
+}
 
-
-  const [likes, setLikes] = React.useState(0);
+return (
+  <div>
+    <button onClick={handleClick}>Like ({likes})</button>
+  </div>
+);
 
 useState(0) creates a likes variable with an initial value of 0.
 
 setLikes() updates the value whenever the button is clicked.
 
 Every time likes changes, React re-renders the component to show the new value.
-
-
 
 
 
